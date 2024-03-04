@@ -1,8 +1,8 @@
 {
   "base": {
     "logo": "",
-    "project": "test",
-    "environment": "test",
+    "project": "Pinterest",
+    "environment": "mobile tests",
     "comment": "see @dzherommo",
     "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
