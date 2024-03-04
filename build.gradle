@@ -1,0 +1,69 @@
+plugins {
+    id 'java-library'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+def selenideVersion = "6.13.0",
+    restAssuredVersion = "5.3.0",
+    allureVersion = "2.19.0",
+    slf4jVersion = "2.0.7"
+
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
+            }
+        }
+    }
+}
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.appium:java-client:8.3.0",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            'org.aeonbits.owner:owner:1.0.12',
+            "commons-io:commons-io:2.11.0",
+            "org.junit.jupiter:junit-jupiter:5.9.2",
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+    )
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task browserstack(type: Test) {
+    useJUnitPlatform {
+        includeTags("browserstack")
+    }
+}
+
+task emulator(type: Test) {
+    useJUnitPlatform {
+        includeTags("emulator")
+    }
+}
