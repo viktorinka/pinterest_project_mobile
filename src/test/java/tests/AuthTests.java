@@ -5,7 +5,6 @@ import helpers.TestData;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -18,7 +17,6 @@ import static io.qameta.allure.Allure.step;
 @Feature("Auth Page")
 public class AuthTests extends TestBase {
 
-    @Tag("browserstack")
     @Test
     @DisplayName("Successful authorization")
     void successfulAuthTest() {
@@ -33,7 +31,6 @@ public class AuthTests extends TestBase {
                 $(id("com.pinterest:id/profile_menu_view")).shouldBe(Condition.visible));
     }
 
-    @Tag("browserstack")
     @Test
     @DisplayName("Unsuccessful authorization with empty email")
     void authWithEmptyEmail() {

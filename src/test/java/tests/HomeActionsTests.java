@@ -7,7 +7,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -26,7 +25,6 @@ import static org.openqa.selenium.By.xpath;
 public class HomeActionsTests extends TestBase {
     TestData testData = new TestData();
 
-    @Tag("browserstack")
     @Test
     @DisplayName("Search profile")
     void searchProfileTest() {
@@ -44,7 +42,6 @@ public class HomeActionsTests extends TestBase {
         });
     }
 
-    @Tag("browserstack")
     @Test
     @DisplayName("Add like reaction")
     void addLikeReactionTest() {
@@ -61,7 +58,6 @@ public class HomeActionsTests extends TestBase {
                 $(accessibilityId("Love")).shouldBe(Condition.visible));
     }
 
-    @Tag("browserstack")
     @Test
     @DisplayName("Update feed")
     void updateFeedTest() {
