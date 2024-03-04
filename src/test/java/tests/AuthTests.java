@@ -2,6 +2,8 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import helpers.TestData;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,6 +14,8 @@ import static io.appium.java_client.AppiumBy.id;
 import static io.appium.java_client.AppiumBy.xpath;
 import static io.qameta.allure.Allure.step;
 
+@Epic("Mobile")
+@Feature("Auth Page")
 public class AuthTests extends TestBase {
 
     @Tag("browserstack")

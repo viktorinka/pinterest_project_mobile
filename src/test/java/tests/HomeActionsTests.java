@@ -3,6 +3,8 @@ package tests;
 import com.codeborne.selenide.Condition;
 import helpers.TestData;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -19,7 +21,8 @@ import static io.appium.java_client.AppiumBy.className;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.xpath;
 
-
+@Epic("Mobile")
+@Feature("Home Actions Page")
 public class HomeActionsTests extends TestBase {
     TestData testData = new TestData();
 
