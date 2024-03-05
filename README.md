@@ -1,6 +1,6 @@
 <h1 align="center"> Demo project to automate Mobile testing for service <a href="https://www.pinterest.com">Pinterest</h1>
 <div align="center">
-  <a href="https://www.pinterest.com"><img alt="Pinterest" src="media/Pinterest_Logo.svg.png"></a>
+  <a href="https://www.pinterest.com"><img alt="Pinterest" src="media/logo/pinterest-logo.png"></a>
 </div>
   
 > Pinterest is social Internet service, photo hosting, allowing users to add images online, place them in thematic collections and share them with other users.
