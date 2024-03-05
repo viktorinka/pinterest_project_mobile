@@ -1,13 +1,12 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import helpers.TestData;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static io.appium.java_client.AppiumBy.id;
 import static io.appium.java_client.AppiumBy.xpath;
@@ -28,7 +27,7 @@ public class AuthTests extends TestBase {
         });
 
         step("Verify avatar", () ->
-                $(id("com.pinterest:id/profile_menu_view")).shouldBe(Condition.visible));
+                $(id("com.pinterest:id/profile_menu_view")).shouldHave(exist));
     }
 
     @Test

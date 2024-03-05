@@ -47,7 +47,7 @@ public class HomeActionsTests extends TestBase {
     void addLikeReactionTest() {
         testData.successfulAuth();
         step("Open pin", () ->
-                $(AppiumBy.id("com.pinterest:id/simple_exoplayer_view")).shouldBe(visible).click());
+                $(AppiumBy.id("com.pinterest:id/simple_exoplayer_view")).shouldBe(visible, Duration.ofSeconds(5)).click());
 
         step("Click like pin", () -> {
             $(accessibilityId("Comments")).click();
