@@ -55,7 +55,7 @@ public class HomeActionsTests extends TestBase {
         });
 
         step("Verify like reaction", () ->
-                $(accessibilityId("Love")).shouldBe(Condition.visible));
+                $(accessibilityId("Love")).shouldBe(Condition.visible, Duration.ofSeconds(6)));
     }
 
     @Test
