@@ -22,7 +22,7 @@ The test project consists of Web, API and mobile(android) tests.\
 A brief list of interesting facts about the project:
 - [x] `Selenide` and `Appium` are used to control the mobile device using a web driver.
 - [x] Tests can be run both locally (using `Android studio` and a mobile device `emulator`) 
-- and using the `Browserstack service`, which provides access to a farm with real mobile devices
+- [x] and using the `Browserstack service`, which provides access to a farm with real mobile devices
 - [x] Config with `Owner` library
 - [x] `Allure TestOps` integration
 - [x] Autotests as test documentation
@@ -56,7 +56,7 @@ The autotests in this project are written in `Java` using `Selenide` framework.\
 `REST Assured` - for easy API testing of REST services.\
 `Jenkins` - CI/CD for running tests remotely.\
 `Browserstack` - to run mobile tests.\
-`Android Studio tools`, `Appium` - to tun mobile tests locally in a mobile device emulator.\
+`Android Studio tools`, `Appium` - to run mobile tests locally in a mobile device emulator.\
 `Allure Report` - for test results visualisation.\
 `Telegram Bot` - for test results notifications.\
 `Allure TestOps` - as Test Management System.
