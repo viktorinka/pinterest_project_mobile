@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import helpers.TestData;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -27,7 +28,7 @@ public class AuthTests extends TestBase {
         });
 
         step("Verify avatar", () ->
-                $(id("com.pinterest:id/profile_menu_view")).shouldHave(exist));
+                $(id("com.pinterest:id/profile_menu_view")).shouldBe(Condition.visible));
     }
 
     @Test
