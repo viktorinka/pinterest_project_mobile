@@ -132,6 +132,11 @@ After the build is completed, a special bot created in <code>Telegram</code>, au
 <a id="Browserstack">
   
 ## <img width="5%" src="media/logo/browserstack-logo.svg"> Test running example in Browserstack
+BrowserStack Dashboard with an example of a mobile test result:
+
+<p align="center">
+<img src="media/browserstack-report.png">
+</p>
 
 A video is attached to each test in the report.
 
